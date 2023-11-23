@@ -9,7 +9,8 @@ function getWeather(response) {
     let date = new Date(responce.data.time * 1000);
 
     cityElement.innerHTML = response.data.city;
-    timeElement.innerHTML= "Tuesday 22:00";
+    
+    timeElement.innerHTML= formatDate(date);
     descriptionElement.innerHTML = response.data.condition.description;
     humidityElement.innerHTML = `${response.data.temperature.humidity}$`;
     windSpeedElement.innerHTML = `$(response.data.wind.speed)km/h`;
@@ -27,7 +28,13 @@ function formatDate(date) {
     "Friday",
     "Saturday"
   ];   
-        
+  let day = days[date.getDay()];
+  
+  if (minutes < 10) {
+minutes =`0${minutes}`;
+  } 
+  return `${hours}:${minutes}`;
+}
 
 function searchCity(city) {
 let apiKey = "1of0t314d94be2d47af94e3feebe0e6d";
