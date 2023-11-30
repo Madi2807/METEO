@@ -7,7 +7,7 @@ a{
 }
 
 .weather-app {
-    background: rgb(89, 65, 92);
+    background: rgb(245, 243, 246);
     max-width: 600px;
     margin: 30px auto;
     box-shadow: 0 30px 50px rgbd(65, 50, 100, 0.08);
