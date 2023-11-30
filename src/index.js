@@ -16,6 +16,7 @@ function getWeather(response) {
     humidityElement.innerHTML = `${response.data.temperature.humidity}$`;
     windSpeedElement.innerHTML = `$(response.data.wind.speed)km/h`;
     
+    console.log(response.data.temperature);
 
 
 function search(event) {
